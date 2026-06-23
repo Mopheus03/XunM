@@ -1,7 +1,6 @@
 import { ThemeProvider, createTheme, CssBaseline, Box } from '@mui/material';
 import { useState, useEffect } from 'react';
 import MainLayout from './components/MainLayout';
-import AuthView from './components/AuthView';  // 你的登录注册组件
 import { registerServiceWorker } from '../registerServiceWorker';
 
 const theme = createTheme({
