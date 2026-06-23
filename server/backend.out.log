@@ -1,0 +1,3 @@
+◇ injected env (5) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
+Server running on http://localhost:3001
+SQLite 数据库已初始化，文件: xunmeng.db
