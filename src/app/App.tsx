@@ -54,24 +54,8 @@ const theme = createTheme({
 });
 
 export default function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  useEffect(() => {
-    // 检查是否存在 token（表示已登录）
-    const token = localStorage.getItem('token');
-    if (token) {
-      setIsLoggedIn(true);
-    }
-  }, []);
-
-  // 注册 PWA Service Worker
-  useEffect(() => {
-    registerServiceWorker();
-  }, []);
-
-  const handleLoginSuccess = () => {
-    setIsLoggedIn(true);
-  };
+  // 直接设置为已登录状态，不再检查 token
+  const isLoggedIn = true;
 
   return (
     <ThemeProvider theme={theme}>
@@ -98,11 +82,8 @@ export default function App() {
             position: 'relative',
           }}
         >
-          {isLoggedIn ? (
-            <MainLayout />
-          ) : (
-            <AuthView onLoginSuccess={handleLoginSuccess} />
-          )}
+          {/* 直接显示主界面，不再判断登录状态 */}
+          <MainLayout />
         </Box>
       </Box>
     </ThemeProvider>
